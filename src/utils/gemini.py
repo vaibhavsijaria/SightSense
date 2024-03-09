@@ -28,6 +28,7 @@ safety_settings = [
 ]
 
 def gemini_response(img: Image, text:str):
+    print('Prompting model ...')
     model = genai.GenerativeModel('gemini-pro-vision')
     reponse = model.generate_content(
         [text,img],
